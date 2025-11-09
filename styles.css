@@ -1,0 +1,86 @@
+
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive;
+  background: linear-gradient(135deg, #ffd6ea, #ffeaf7, #fff2fb);
+  text-align: center;
+  color: #ff69b4;
+}
+
+.screen { display: none; padding: 40px; }
+.screen.active { display: block; }
+
+.btn {
+  margin-top: 30px;
+  padding: 12px 24px;
+  background: #ff9acb;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 0 10px rgba(255,105,180,.5);
+}
+.btn:hover { background: #ffb5da; }
+
+/* Envelope */
+.envelope { position: relative; width: 260px; height: 180px; margin: auto; margin-top: 60px; }
+.envelope-body {
+  width: 100%; height: 100%;
+  background: #ffffff;
+  border: 2px solid #ffb5da;
+  border-radius: 6px;
+}
+.envelope-flap {
+  width: 0; height: 0;
+  border-left: 130px solid transparent;
+  border-right: 130px solid transparent;
+  border-bottom: 100px solid #ffe3f3;
+  position: absolute; top: -100px;
+}
+.front-text { margin-top: 20px; font-size: 22px; color: #ff69b4; }
+
+/* Letter */
+.letter {
+  max-width: 320px;
+  background: white;
+  border: 2px solid #ffc6e8;
+  padding: 20px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255,105,180,.3);
+  font-size: 18px;
+}
+
+/* Cake */
+#cake { display: flex; justify-content: center; margin-top: 30px; flex-wrap: wrap; }
+.candle { width: 20px; height: 50px; background: #ffb3d9; margin: 4px; border-radius: 4px; position: relative; }
+.flame {
+  width: 12px; height: 12px;
+  background: radial-gradient(circle, #fffc7f, #ffb347);
+  border-radius: 50%;
+  position: absolute; top: -14px; left: 4px;
+  cursor: pointer;
+  animation: flicker 0.6s infinite alternate;
+}
+@keyframes flicker {
+  from { transform: scale(1) translateY(0); }
+  to { transform: scale(1.2) translateY(-2px); }
+}
+
+.hidden { display: none; }
+
+
+/* Heart Rain Animation */
+.heart {
+  position: fixed;
+  top: -10px;
+  color: #ff8ecf;
+  font-size: 18px;
+  animation: fall 4s linear infinite;
+  pointer-events: none;
+}
+@keyframes fall {
+  0% { transform: translateY(-10px) translateX(0); opacity: 1; }
+  100% { transform: translateY(110vh) translateX(40px); opacity: 0; }
+}
