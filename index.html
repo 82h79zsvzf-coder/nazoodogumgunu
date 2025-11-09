@@ -3,240 +3,73 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Naz'ın Doğum Günü 🫶🫶</title>
-
+<title>Doğum Günün Kutlu Olsun Nazom 🫶</title>
 <style>
-body {
-  margin: 0;
-  background: linear-gradient(135deg, #ffd6ea, #ffeaf7, #fff3fc);
-  font-family: "Comic Sans MS", cursive;
-  text-align: center;
-  color: #ff6faf;
-  overflow-x: hidden;
-}
-
-/* EKRANLAR */
-.screen { display: none; padding: 40px; }
-.active { display: block; }
-
-/* BUTON */
-.btn {
-  margin-top: 30px;
-  padding: 12px 24px;
-  background: #ff9acb;
-  border: none;
-  border-radius: 22px;
-  font-size: 18px;
-  color: white;
-  cursor: pointer;
-  box-shadow: 0 0 12px rgba(255, 100, 160, .5);
-}
-
-/* ZARF (ANA SAYFA) */
-.envelope {
-  width: 260px;
-  height: 180px;
-  margin: 60px auto;
-  position: relative;
-}
-
-.envelope-body {
-  width: 100%;
-  height: 100%;
-  background: white;
-  border: 2px solid #ffb5da;
-  border-radius: 6px;
-  position: relative;
-  z-index: 2;
-}
-
-.envelope-flap {
-  width: 0;
-  height: 0;
-  border-left: 130px solid transparent;
-  border-right: 130px solid transparent;
-  border-bottom: 100px solid #ffe3f3;
-  position: absolute;
-  top: -100px;
-  z-index: 3;
-}
-
-.front-text {
-  position: absolute;
-  width: 100%;
-  top: 65px;
-  left: 0;
-  font-size: 18px;
-}
-
-/* MEKTUP */
-.letter {
-  max-width: 340px;
-  margin: auto;
-  background: white;
-  border: 2px solid #ffc6e8;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 0 14px rgba(255,105,180,.3);
-  font-size: 18px;
-}
-
-/* PASTA & MUM */
-#cake { display: flex; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
-.candle { width: 20px; height: 50px; background: #ffb3d9; margin: 4px; border-radius: 4px; position: relative; }
-.flame { width: 12px; height: 12px; background: radial-gradient(circle, #fff6a4, #ffb347); border-radius: 50%; position: absolute; top: -14px; left: 4px; cursor: pointer; }
-.hidden { display: none; }
-
-/* KALP YAĞMURU */
-.heart {
-  position: fixed;
-  top: -10px;
-  color: #ff8ecf;
-  font-size: 18px;
-  animation: fall 4s linear infinite;
-  pointer-events: none;
-}
-@keyframes fall {
-  0% { transform: translateY(-10px); }
-  100% { transform: translateY(110vh); opacity: 0; }
-}
-
-/* YILDIZ PARILTISI */
-.star {
-  position: fixed;
-  width: 4px;
-  height: 4px;
-  background: white;
-  border-radius: 50%;
-  opacity: 0.8;
-  animation: twinkle 2s infinite ease-in-out;
-}
-@keyframes twinkle {
-  0%,100% { opacity: .2; }
-  50% { opacity: 1; }
-}
-
-/* BALONLAR */
-.balloon {
-  position: fixed;
-  bottom: -40px;
-  font-size: 28px;
-  animation: floatUp 6s linear infinite;
-}
-@keyframes floatUp {
-  0% { transform: translateY(0) }
-  100% { transform: translateY(-120vh) }
-}
-
-/* KONFETİ */
-.confetti {
-  position: fixed;
-  top: -10px;
-  width: 8px;
-  height: 8px;
-  animation: drop linear forwards;
-}
-@keyframes drop { to { transform: translateY(100vh) rotate(360deg); } }
+body { margin:0; font-family:'Comic Sans MS',cursive; background:linear-gradient(135deg,#ffd6ea,#ffeaf7,#fff2fb); text-align:center; color:#ff69b4; }
+.screen{display:none;padding:40px;} .active{display:block;}
+.btn{margin-top:30px;padding:12px 24px;background:#ff9acb;border:none;border-radius:20px;color:white;cursor:pointer;font-size:18px;box-shadow:0 0 10px rgba(255,105,180,.5);}
+.envelope{position:relative;width:260px;height:180px;margin:60px auto;}
+.envelope-body{width:100%;height:100%;background:white;border:2px solid #ffb5da;border-radius:6px;}
+.envelope-flap{width:0;height:0;border-left:130px solid transparent;border-right:130px solid transparent;border-bottom:100px solid #ffe3f3;position:absolute;top:-100px;}
+.letter{max-width:320px;background:white;border:2px solid #ffc6e8;padding:20px;margin:auto;border-radius:10px;box-shadow:0 0 10px rgba(255,105,180,.3);font-size:18px;}
+#cake{display:flex;justify-content:center;flex-wrap:wrap;margin-top:30px;}
+.candle{width:20px;height:50px;background:#ffb3d9;margin:4px;border-radius:4px;position:relative;}
+.flame{width:12px;height:12px;background:radial-gradient(circle,#fffc7f,#ffb347);border-radius:50%;position:absolute;top:-14px;left:4px;cursor:pointer;}
+.hidden{display:none;}
+/* Kalp yağmuru */
+.heart{position:fixed;top:-10px;color:#ff8ecf;font-size:18px;animation:fall 4s linear infinite;pointer-events:none;}
+@keyframes fall{0%{transform:translateY(-10px);}100%{transform:translateY(110vh);opacity:0;}}
+/* Konfeti */
+.confetti{position:fixed;top:-10px;width:8px;height:8px;background:hotpink;animation:drop linear forwards;}
+@keyframes drop{to{transform:translateY(100vh) rotate(360deg);}}
 </style>
 </head>
-
 <body>
 
 <section id="screen1" class="screen active">
-  <div class="envelope">
-    <div class="envelope-flap"></div>
-    <div class="envelope-body"></div>
-    <p class="front-text">Doğum günün kutlu olsun Nazom 🎉</p>
-  </div>
-  <button class="btn" onclick="go(2)">İlerle</button>
+<div class="envelope"><div class="envelope-flap"></div><div class="envelope-body"></div>
+<p class="front-text">Doğum günün kutlu olsun Nazom 💖</p></div>
+<button class="btn" onclick="go(2)">İlerle</button>
 </section>
 
 <section id="screen2" class="screen">
-  <div class="letter">
-    Nazom 🤗<br><br>
-    İyi ki doğdun, iyi ki varsın.<br>
-    Ben her zaman yanındayım.<br>
-    Çoooook seviliyorsun... ✨💞
-  </div>
-  <button class="btn" onclick="go(3)">İlerle</button>
+<div class="letter"><p>Nazom,<br><br>İyi ki doğmuşsun 💗<br>Ben hep yanındayım.<br>Çooooook seviliyorsun 💗🌙✨</p></div>
+<button class="btn" onclick="go(3)">İlerle</button>
 </section>
 
 <section id="screen3" class="screen">
-  <h2>Dilek tut ve mumları üfle 🎂</h2>
-  <div id="cake"></div>
-  <p id="wish" class="hidden">🎉 Dileğin gerçekleşsin Nazom 🥰✨</p>
-
-  <!-- MÜZİK (OTOMATİK) -->
-  <audio autoplay loop>
-    <source src="https://p.scdn.co/mp3-preview/1c4d8b8e468aeee74655d903d937566cfd3a3cc9" type="audio/mpeg">
-  </audio>
+<h2>Mumları üfle 🎂</h2>
+<div id="cake">
+<script>for(let i=0;i<19;i++)document.write('<div class="candle"><div class="flame" onclick="blow(this)"></div></div>');</script>
+</div>
+<p id="wish" class="hidden">🎉 Dileğin gerçekleşsin Nazom 💗✨</p>
+<br>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5KSwwf96ITyukZpWfazLzS" width="250" height="80"></iframe>
 </section>
 
-
 <script>
-/* EKRAN GEÇİŞ */
-function go(n){
-  document.querySelectorAll('.screen').forEach(s=>s.classList.remove("active"));
-  document.getElementById("screen"+n).classList.add("active");
-}
+function go(n){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById('screen'+n).classList.add('active');}
+function blow(f){f.remove();check();}
+function check(){
+if(document.querySelectorAll('.flame').length==0){
+document.getElementById('wish').classList.remove('hidden');
+confetti();
+}}
 
-/* PASTA MUM OLUŞTUR */
-for(let i=0;i<19;i++){
-  document.getElementById("cake").innerHTML += '<div class="candle"><div class="flame" onclick="blow(this)"></div></div>';
-}
-
-/* MUM SÖNDÜR */
-function blow(f){
-  f.remove();
-  if(document.querySelectorAll(".flame").length===0){
-    document.getElementById("wish").classList.remove("hidden");
-    confetti();
-  }
-}
-
-/* KALP YAĞMURU */
+// Kalpler
 setInterval(()=>{
-  let h=document.createElement("div");
-  h.className="heart";
-  h.innerHTML="💗";
-  h.style.left=Math.random()*100+"vw";
-  document.body.appendChild(h);
-  setTimeout(()=>h.remove(),4000);
+let h=document.createElement('div');h.className='heart';h.innerHTML='💗';
+h.style.left=Math.random()*100+'vw';document.body.appendChild(h);
+setTimeout(()=>h.remove(),4000)
 },300);
 
-/* YILDIZLAR */
-setInterval(()=>{
-  let s=document.createElement("div");
-  s.className="star";
-  s.style.left=Math.random()*100+"vw";
-  s.style.top=Math.random()*100+"vh";
-  document.body.appendChild(s);
-  setTimeout(()=>s.remove(),2000);
-},200);
-
-/* BALONLAR */
-setInterval(()=>{
-  let b=document.createElement("div");
-  b.className="balloon";
-  b.innerHTML="🎈";
-  b.style.left=Math.random()*100+"vw";
-  document.body.appendChild(b);
-  setTimeout(()=>b.remove(),6000);
-},700);
-
-/* KONFETİ */
+// Konfeti
 function confetti(){
-  for(let i=0;i<60;i++){
-    let c=document.createElement("div");
-    c.className="confetti";
-    c.style.left=Math.random()*100+"vw";
-    c.style.background="hsl("+Math.random()*360+",80%,70%)";
-    c.style.animationDuration=(1+Math.random()*2)+"s";
-    document.body.appendChild(c);
-    setTimeout(()=>c.remove(),4000);
-  }
-}
+for(let i=0;i<60;i++){
+let c=document.createElement('div');c.className='confetti';
+c.style.left=Math.random()*100+'vw';c.style.background='hsl('+Math.random()*360+',80%,70%)';
+c.style.animationDuration=(1+Math.random()*2)+'s';document.body.appendChild(c);
+setTimeout(()=>c.remove(),3000);
+}}
 </script>
-
-</body>
-</html>
+</body></html>
